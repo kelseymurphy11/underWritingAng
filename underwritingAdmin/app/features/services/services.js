@@ -1,7 +1,7 @@
 var services = angular.module('admin.services', []);
 services.factory('adminServices', function($http) {
 
-
+	///Need to change the request url.
 	$http({
 		method: 'GET',
 		url: 'http://www.w3schools.com/angular/customers.php'
@@ -16,7 +16,8 @@ services.factory('adminServices', function($http) {
 
 		//console.log(response)
 	});
-
+	
+	///Need to change the request url.
 	$http({
 		method: 'POST',
 		url: 'http://www.w3schools.com/angular/customers.php'
