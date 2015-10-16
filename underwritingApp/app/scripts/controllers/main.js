@@ -7,11 +7,12 @@
  * # MainCtrl
  * Controller of the underwritingAppApp
  */
-angular.module('underwritingAppApp')
-  .controller('MainCtrl', function () {
+angular.module('underwritingApp')
+  .controller('MainCtrl', function ($scope) {
     this.awesomeThings = [
       'HTML5 Boilerplate',
       'AngularJS',
       'Karma'
     ];
+
   });

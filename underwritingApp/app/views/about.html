@@ -1,1 +1,74 @@
-<p>This is the about view.</p>
+<!-- FORM -->
+      <!-- pass in the variable if our form is valid or invalid -->
+      <form name="userForm" ng-submit="submitForm(userForm.$valid)" novalidate> <!-- novalidate prevents HTML5 validation since we will be validating ourselves -->
+
+        <!-- Questionaire -->
+        <div class="form-group">
+          <label>First Name</label>
+          <input type="text" name="name" class="form-control" ng-model="applicant.firstname"  >
+        </div>
+
+        <div class="form-group">
+          <label>Last Name</label>
+          <input type="text" name="username" class="form-control" ng-model="applicant.lastname"  >
+        </div>
+        
+        <div class="form-group">
+          <label>Email</label>
+          <input type="email" name="email" class="form-control" ng-model="applicant.email"  >
+        </div>
+
+        <div class="form-group">
+          <label>Birthday</label>
+          <input type="date" name="Birthday" class="form-control" ng-model="applicant.bday"  >
+        </div>
+
+        <div class="form-group">
+          <label>Social Security Number</label>
+          <input type="text" name="Social" class="form-control" ng-model="applicant.ssn" value="123-xx-xxxx" read only> 
+        </div>
+
+        <div class="form-group">
+          <label>Veteran Status</label>
+          <input type="radio" name="veteran" value="true" ng-model="applicant.veteran"> Yes
+          <input type="radio" name="veteran" value="false" ng-model="applicant.veteran"> No
+        </div>
+        <div class="form-group">
+          <label>Phone Number</label>
+          <input type="number" name="Phone" class="form-control" ng-model="applicant.phone" min="10" max="10" >
+        </div>
+        <div class="form-group">
+          <label>Credit Score</label>
+          <input type="number" name="Credit Score" class="form-control" ng-model="applicant.creditscore" max="850" >
+        </div>
+
+        <div class="form-group">
+          <label>Income</label>
+          <input type="number" name="Income" class="form-control" ng-model="applicant.income"  >
+        </div>
+
+        <div class="form-group">
+          <label>Marital Status</label>
+            <select>
+              <option value="married">Married</option>
+              <option value="single">Single</option>
+              <option value="divorce">Divorced</option>
+              <option value="widowed">Widowed</option>
+            </select>  
+        </div>
+        <div class="form-group">
+          <label>Employment</label>
+            <select>
+              <option value="full-time">Full-time</option>
+              <option value="part-time">Part-time</option>
+              <option value="self-employed">Self-Employed</option>
+              <option value="unemployed">Unemployed</option>
+            </select>
+        </div>
+        
+        <!-- SUBMIT BUTTON -->
+        <button type="submit" class="btn btn-primary" ng-disabled="userForm.$invalid">Submit</button>
+        <p>
+          By clicking Submit you are agreeing that all answers are answered truthfully. If not your application will be denied.
+        </p>
+      </form>

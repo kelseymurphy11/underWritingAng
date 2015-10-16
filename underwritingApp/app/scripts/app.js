@@ -9,7 +9,7 @@
  * Main module of the application.
  */
 angular
-  .module('underwritingAppApp', [
+  .module('underwritingApp', [
     'ngAnimate',
     'ngCookies',
     'ngResource',
