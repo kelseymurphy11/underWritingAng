@@ -1,23 +1,32 @@
-<div class="jumbotron">
-  <h1>'Allo, 'Allo!</h1>
-  <p class="lead">
-    <img src="images/yeoman.png" alt="I'm Yeoman"><br>
-    Always a pleasure scaffolding your apps.
-  </p>
-  <p><a class="btn btn-lg btn-success" ng-href="#/">Splendid!<span class="glyphicon glyphicon-ok"></span></a></p>
+<div ng-app = "underwritingAdminApp" ng-controller = "MainCtrl">
+
+<script src="controllers/main.js"></script>
+
+<!-- USERNAME -->
+<div class="form-group">
+    <label>Username</label>
+    <input type="text" name="adminname" class="form-control" ng-model="user.username" ng-minlength="3" ng-maxlength="20">
 </div>
+<!-- NAME -->
+        <div class="form-group">
+            <label>Set Dept/income Max</label>
+            <input type="text" name="setdebtincome" class="form-control" ng-model="admin.setdebtincome" required>
+        </div>
 
-<div class="row marketing">
-  <h4>HTML5 Boilerplate</h4>
-  <p>
-    HTML5 Boilerplate is a professional front-end template for building fast, robust, and adaptable web apps or sites.
-  </p>
+        <div class="form-group">
+            <label>Set Min Credit</label>
+            <input type="text" name="setmincredit" class="form-control" ng-model="admin.setmincredit" required>
+        </div>
 
-  <h4>Angular</h4>
-  <p>
-    AngularJS is a toolset for building the framework most suited to your application development.
-  </p>
+        <div class="form-group">
+            <label>Set Min Assets  </label>
+            <input type="text" name="setminassests" class="form-control" ng-model="admin.setminassests" required>
+        </div>
+         <div class="form-group">
+            <label>Veteran Status</label>
+            <input type="text" name="setVstatus" class="form-control" ng-model="admin.xsetVstatus" required>
+        </div>
 
-  <h4>Karma</h4>
-  <p>Spectacular Test Runner for JavaScript.</p>
+
+<button type="submit" class="btn btn-primary">Submit</button>
 </div>

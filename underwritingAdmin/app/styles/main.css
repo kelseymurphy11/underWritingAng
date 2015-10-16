@@ -80,4 +80,9 @@ body {
   .jumbotron {
     border-bottom: 0;
   }
+  .WTF{
+    max-height: 150px; 
+    max-width:150px;
+    
+  }
 }
