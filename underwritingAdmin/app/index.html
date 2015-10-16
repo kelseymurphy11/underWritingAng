@@ -38,26 +38,45 @@
 
             <a class="navbar-brand" href="#/">underwritingAdmin</a>
           </div>
-
-          <div class="collapse navbar-collapse" id="js-navbar-collapse">
-
-            <ul class="nav navbar-nav">
-              <li class="active"><a href="#/">Home</a></li>
-              <li><a ng-href="#/about">About</a></li>
-              <li><a ng-href="#/">Contact</a></li>
-            </ul>
-          </div>
         </div>
       </div>
     </div>
 
-
-        
-
-
-
     <div class="container">
-    <div ng-view=""></div>
+
+    <div ng-app = "underwritingAdminApp" ng-controller = "MainCtrl">
+
+    
+    <form ng-submit="submit()">
+      <!-- USERNAME -->
+      <div class="form-group">
+          <label>Username</label>
+          <input type="text" name="adminname" class="form-control" ng-model="user.username" ng-minlength="3" ng-maxlength="20">
+      </div>
+      <!-- NAME -->
+              <div class="form-group">
+                  <label>Set Dept/income Max</label>
+                  <input type="text" name="setdebtincome" class="form-control" ng-model="admin.setdebtincome" required>
+              </div>
+
+              <div class="form-group">
+                  <label>Set Min Credit</label>
+                  <input type="text" name="setmincredit" class="form-control" ng-model="admin.setmincredit" required>
+              </div>
+
+              <div class="form-group">
+                  <label>Set Min Assets  </label>
+                  <input type="text" name="setminassests" class="form-control" ng-model="admin.setminassests" required>
+              </div>
+               <div class="form-group">
+                  <label>Veteran Status</label>
+                  <input type="text" name="setVstatus" class="form-control" ng-model="admin.xsetVstatus" required>
+              </div>
+
+
+      <button type="submit" class="btn btn-primary">Submit</button>
+      </div>
+    </form>
     </div>
 
     <div class="footer">
